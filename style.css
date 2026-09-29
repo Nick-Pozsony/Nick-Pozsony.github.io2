@@ -20,7 +20,7 @@ body {
 nav {
     background-color: #111827;
     color: white;
-    padding: 20px 8%;
+    padding: 15px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,8 +29,22 @@ nav {
     z-index: 1000;
 }
 
-nav h2 {
+.nav-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-name h2 {
     font-size: 22px;
+}
+
+.nav-photo {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid white;
 }
 
 .nav-links {
@@ -55,6 +69,18 @@ nav h2 {
     align-items: center;
     padding: 80px 10%;
     background: white;
+}
+
+.hero-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.hero-text {
+    max-width: 700px;
 }
 
 .intro {
@@ -89,6 +115,16 @@ nav h2 {
 
 .button:hover {
     background-color: #1d4ed8;
+}
+
+/* Headshot */
+.hero-photo {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #2563eb;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* Sections */
@@ -183,7 +219,7 @@ footer a:hover {
     color: #60a5fa;
 }
 
-/* Mobile */
+/* Tablet */
 @media (max-width: 900px) {
 
     .skills-container {
@@ -194,11 +230,21 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 
+    .hero-content {
+        gap: 30px;
+    }
+
     .hero h1 {
         font-size: 45px;
     }
+
+    .hero-photo {
+        width: 210px;
+        height: 210px;
+    }
 }
 
+/* Mobile */
 @media (max-width: 600px) {
 
     nav {
@@ -210,6 +256,20 @@ footer a:hover {
         gap: 15px;
     }
 
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-photo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
     .skills-container {
         grid-template-columns: 1fr;
     }
@@ -217,10 +277,11 @@ footer a:hover {
     footer {
         flex-direction: column;
         gap: 15px;
+        text-align: center;
     }
 
     footer a {
-        margin-left: 0;
-        margin-right: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
